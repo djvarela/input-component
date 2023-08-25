@@ -1,75 +1,122 @@
-*{
+* {
   box-sizing: border-box;
 }
 
-span{
+.buttonContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
 }
 
-input{
-  padding: 1em;
+input {
   border: 1px solid #aba7a7;
+  width: 12rem;
+  height: 3em;
+  padding: 1em;  
+
+
+
 }
-input:hover{
+.hover {
   border: 1px solid #222;
 }
-input:focus{
-  border-radius: none;
-  outline:none;
-  border: 1px solid rgb(40, 40, 230)
+.focus {
+  border: 1px solid rgb(40, 40, 230);
 }
 
-input:active{
+.active {
   border-radius: none;
 }
 
-
-
-.disabled{
+.disabled {
   background-color: #f8f8f8;
   content: disabled;
   outline: none;
   border: none;
-  
 }
 .disabled:focus{
-  border: none;
+  border: 1px solid transparent;
   outline: none;
 }
-.disabled:hover{
-  border: none;
+.disabled:hover {
+  border: 1px solid transparent;
   outline: none;
 }
 
-.sm{
+.sm {
   width: 10rem;
   height: 1em;
   padding: 1em;
 }
-.md{
+.md {
   width: 12rem;
   height: 3em;
   padding: 1em;
 }
 
-.md{
-  width: 12rem;
-  height: 3em;
-  padding: 1em;
-}
-.full{
+.full {
   width: 100%;
 }
 
-.error{
-  border: 2px solid #f53737;
-  background-color: rgb(255, 214, 214);
+.error {
+  border: 1px solid #f53737;
 }
-.error::placeholder{
-  color: #f53737;
-  letter-spacing: .3px;
+.error:hover{
+  border: 1px solid #bc1b1b;
+}
+.error:active{
+  border: 1px solid #bc1b1b;
+}
+.error:focus{
+  border: 1px solid #bc1b1b;
+  outline: 1px solid #bc1b1b;
+
+}
+
+.error ~ small{
+  color:#f53737
+}
+
+.error::placeholder {
+  letter-spacing: 0.3px;
   font-weight: bold;
 }
+
+.focus {
+  border-radius: none;
+  outline: none;
+  border: 1px solid rgb(40, 40, 230);
+}
+
+.endIcon, .starIcon{
+display:flex;
+position: relative;
+width: auto;
+height: auto;
+padding: 0em 2em 2em 0;
+justify-content: center;
+align-items: center;
+
+}
+
+.endIcon > .material-symbols-rounded{
+position: absolute;
+right: 40px
+}
+
+.starIcon > .material-symbols-rounded{
+  position: absolute;
+  left: 10px;
+
+  }
+.starIcon input {
+  padding-left: 40px;
+}
+
+
+/* 
+input:focus ~ .material-symbols-rounded{
+  display: none;
+} */
